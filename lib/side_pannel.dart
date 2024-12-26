@@ -1,12 +1,13 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:e_commerce/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:image_picker/image_picker.dart';
 
 class SidePannel extends StatefulWidget {
+  const SidePannel({super.key});
   static const String id = 'side_pannel';
+  @override
   State<SidePannel> createState() => SidePannelState();
 }
 
@@ -33,16 +34,16 @@ class SidePannelState extends State<SidePannel> {
             mainAxisSize: MainAxisSize.min,
             children: [
               ListTile(
-                leading: Icon(Icons.camera_alt),
-                title: Text('Take Photo'),
+                leading: const Icon(Icons.camera_alt),
+                title: const Text('Take Photo'),
                 onTap: () {
                   Navigator.pop(context);
                   _pickImage(ImageSource.camera);
                 },
               ),
               ListTile(
-                leading: Icon(Icons.photo_library_rounded),
-                title: Text('Choose from Gallery'),
+                leading: const Icon(Icons.photo_library_rounded),
+                title: const Text('Choose from Gallery'),
                 onTap: () {
                   Navigator.pop(context);
                   _pickImage(ImageSource.gallery);
@@ -58,7 +59,7 @@ class SidePannelState extends State<SidePannel> {
     final Object? argument = ModalRoute.of(context)!.settings.arguments;
     fullName = (argument is String) ? argument : 'guest';
     return Drawer(
-      backgroundColor: Color(0xffEFEFEF),
+      backgroundColor: const Color(0xffEFEFEF),
       child: Padding(
         padding: const EdgeInsets.only(
           top: 40,
@@ -73,14 +74,14 @@ class SidePannelState extends State<SidePannel> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back,
                     ),
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width / 4,
                   ),
-                  Text(
+                  const Text(
                     'Profile',
                     style: TextStyle(
                       fontSize: 20,
@@ -90,7 +91,7 @@ class SidePannelState extends State<SidePannel> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 80,
             ),
             Container(
@@ -100,7 +101,7 @@ class SidePannelState extends State<SidePannel> {
                 color: Colors.white,
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: Color(0xff67802F),
+                  color: const Color(0xff67802F),
                   width: 2,
                 ),
                 image: DecorationImage(
@@ -108,7 +109,7 @@ class SidePannelState extends State<SidePannel> {
                       ? FileImage(
                           File(_imageFile!.path),
                         ) as ImageProvider
-                      : AssetImage('images/imageNO.jpg'),
+                      : const AssetImage('images/imageNO.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -126,12 +127,12 @@ class SidePannelState extends State<SidePannel> {
                         color: Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Color(
+                          color: const Color(
                             0xff67802F,
                           ),
                         ),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.add_a_photo_rounded,
                         size: 15,
                         color: Color(0xff67802F),
@@ -141,17 +142,17 @@ class SidePannelState extends State<SidePannel> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
               '${fullName}',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w600,
               ),
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
@@ -165,7 +166,7 @@ class SidePannelState extends State<SidePannel> {
                 Text('Active status'),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Expanded(
@@ -182,32 +183,32 @@ class SidePannelState extends State<SidePannel> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ProfileField(
+                      const ProfileField(
                         fieldName: 'Edit Profile',
                         fieldIcon: Icons.person,
                         fieldEditIcon: Icons.arrow_forward_ios,
                       ),
-                      ProfileField(
+                      const ProfileField(
                         fieldName: 'Shopping Address',
                         fieldIcon: Icons.location_on,
                         fieldEditIcon: Icons.arrow_forward_ios,
                       ),
-                      ProfileField(
+                      const ProfileField(
                         fieldName: 'Wishlist',
                         fieldIcon: Icons.favorite,
                         fieldEditIcon: Icons.arrow_forward_ios,
                       ),
-                      ProfileField(
+                      const ProfileField(
                         fieldName: 'Order History',
                         fieldIcon: Icons.history,
                         fieldEditIcon: Icons.arrow_forward_ios,
                       ),
-                      ProfileField(
+                      const ProfileField(
                         fieldName: 'Notification',
                         fieldIcon: Icons.notifications,
                         fieldEditIcon: Icons.arrow_forward_ios,
                       ),
-                      ProfileField(
+                      const ProfileField(
                         fieldName: 'Cards',
                         fieldIcon: Icons.credit_card_outlined,
                         fieldEditIcon: Icons.arrow_forward_ios,
@@ -217,7 +218,7 @@ class SidePannelState extends State<SidePannel> {
                           auth.signOut();
                           Navigator.pushNamed(context, LoginPage.id);
                         },
-                        child: Row(
+                        child: const Row(
                           children: [
                             Flexible(
                               child: ListTile(
@@ -251,7 +252,8 @@ class SidePannelState extends State<SidePannel> {
 }
 
 class ProfileField extends StatelessWidget {
-  ProfileField({
+  const ProfileField({
+    super.key,
     required this.fieldName,
     required this.fieldIcon,
     required this.fieldEditIcon,
@@ -274,7 +276,7 @@ class ProfileField extends StatelessWidget {
             ),
             title: Text(
               fieldName,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.w500,
               ),
             ),
