@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+
+class container extends StatelessWidget {
+  static const String id = 'container';
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+      ),
+      body: Container(
+        height: 100,
+        width: 100,
+        color: Colors.black,
+      ),
+    );
+  }
+}
