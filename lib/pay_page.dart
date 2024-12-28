@@ -3,6 +3,9 @@ import 'package:e_commerce/stripe_services.dart';
 
 class PayPage extends StatefulWidget {
   static const String id = 'pay_page';
+
+  const PayPage({super.key});
+  @override
   PayPageState createState() => PayPageState();
 }
 
@@ -12,19 +15,19 @@ class PayPageState extends State<PayPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffEFEFEF),
+      backgroundColor: const Color(0xffEFEFEF),
       appBar: AppBar(
-        backgroundColor: Color(0xffEFEFEF),
+        backgroundColor: const Color(0xffEFEFEF),
         title: Row(
           children: [
-            Icon(
+            const Icon(
               Icons.arrow_back,
               weight: 10,
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width / 4,
             ),
-            Text(
+            const Text(
               'Check Out',
               style: TextStyle(
                 fontSize: 19,
@@ -57,24 +60,24 @@ class PayPageState extends State<PayPage> {
                       Container(
                         height: 30,
                         width: 30,
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: FloatingActionButton(
                           elevation: 3,
                           onPressed: () {},
-                          backgroundColor: Color(0xff67802F),
+                          backgroundColor: const Color(0xff67802F),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Icon(
+                          child: const Icon(
                             Icons.add,
                             color: Colors.white,
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         'New',
                         style: TextStyle(
                           fontSize: 15,
@@ -84,7 +87,7 @@ class PayPageState extends State<PayPage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Expanded(
@@ -100,13 +103,13 @@ class PayPageState extends State<PayPage> {
                           decoration: BoxDecoration(
                             color: Colors.blue,
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               fit: BoxFit.fill,
                               image: AssetImage('images/master1.jpg'),
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Container(
@@ -115,13 +118,13 @@ class PayPageState extends State<PayPage> {
                           decoration: BoxDecoration(
                             color: Colors.blue,
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               fit: BoxFit.fill,
                               image: AssetImage('images/redcard.png'),
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Container(
@@ -130,7 +133,7 @@ class PayPageState extends State<PayPage> {
                           decoration: BoxDecoration(
                             color: Colors.blue,
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               fit: BoxFit.fill,
                               image: AssetImage('images/visa1.jpg'),
                             ),
@@ -142,7 +145,7 @@ class PayPageState extends State<PayPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Row(
@@ -153,7 +156,7 @@ class PayPageState extends State<PayPage> {
                   size: 8,
                   color: Colors.grey[500],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 Icon(
@@ -161,7 +164,7 @@ class PayPageState extends State<PayPage> {
                   size: 8,
                   color: Colors.grey[700],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 Icon(
@@ -171,20 +174,20 @@ class PayPageState extends State<PayPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               'Add New Card',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            Row(
+            const Row(
               children: [
                 CompanyCards(
-                  Image: AssetImage(
+                  image: AssetImage(
                     'images/apple1.png',
                   ),
                 ),
@@ -192,7 +195,7 @@ class PayPageState extends State<PayPage> {
                   width: 15,
                 ),
                 CompanyCards(
-                  Image: AssetImage(
+                  image: AssetImage(
                     'images/google.png',
                   ),
                 ),
@@ -200,7 +203,7 @@ class PayPageState extends State<PayPage> {
                   width: 15,
                 ),
                 CompanyCards(
-                  Image: AssetImage(
+                  image: AssetImage(
                     'images/paypal1.png',
                   ),
                 ),
@@ -208,14 +211,14 @@ class PayPageState extends State<PayPage> {
                   width: 15,
                 ),
                 CompanyCards(
-                  Image: AssetImage(
+                  image: AssetImage(
                     'images/mastercard1.png',
                   ),
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 7),
+            const Padding(
+              padding: EdgeInsets.only(left: 7),
               child: Row(
                 children: [
                   Text(
@@ -258,17 +261,17 @@ class PayPageState extends State<PayPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
-            Text(
+            const Text(
               'Card Holder',
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Container(
@@ -291,17 +294,17 @@ class PayPageState extends State<PayPage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               'Card Number',
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Container(
@@ -324,10 +327,10 @@ class PayPageState extends State<PayPage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               children: [
                 Text(
                   'Expire Date',
@@ -369,7 +372,7 @@ class PayPageState extends State<PayPage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Container(
@@ -393,7 +396,7 @@ class PayPageState extends State<PayPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
@@ -408,7 +411,7 @@ class PayPageState extends State<PayPage> {
                     height: 20,
                     width: 20,
                     decoration: BoxDecoration(
-                      color: isChecked ? Color(0xff67802F) : Colors.white,
+                      color: isChecked ? const Color(0xff67802F) : Colors.white,
                       shape: BoxShape.circle,
                       border: Border.all(),
                     ),
@@ -420,10 +423,10 @@ class PayPageState extends State<PayPage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 15,
                 ),
-                Text(
+                const Text(
                   'Save Credit Card Information',
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
@@ -431,7 +434,7 @@ class PayPageState extends State<PayPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             MaterialButton(
@@ -439,11 +442,11 @@ class PayPageState extends State<PayPage> {
               onPressed: () async {
                 await StripeServices.instance.makePayment();
               },
-              color: Color(0xff67802F),
+              color: const Color(0xff67802F),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Text(
+              child: const Text(
                 'Pay',
                 style: TextStyle(
                   color: Colors.white,
@@ -460,8 +463,8 @@ class PayPageState extends State<PayPage> {
 }
 
 class CompanyCards extends StatelessWidget {
-  CompanyCards({required this.Image});
-  final ImageProvider Image;
+  const CompanyCards({super.key, required this.image});
+  final ImageProvider image;
 
   @override
   Widget build(BuildContext context) {
@@ -472,7 +475,7 @@ class CompanyCards extends StatelessWidget {
         color: Colors.white70,
         borderRadius: BorderRadius.circular(5),
         image: DecorationImage(
-          image: Image,
+          image: image,
         ),
       ),
     );
