@@ -232,14 +232,14 @@ class RegistrationPageState extends State<RegistrationPage> {
                           });
                         },
                         child: isShowPassword
-                            ? Icon(
+                            ? const  Icon(
                                 Icons.visibility_off,
                                 color: Color(
                                   0xff67802F,
                                 ),
                                 size: 20,
                               )
-                            : Icon(
+                            :const  Icon(
                                 Icons.visibility,
                                 color: Color(0xff67802F),
                                 size: 20,
@@ -247,7 +247,7 @@ class RegistrationPageState extends State<RegistrationPage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                 const  SizedBox(
                     height: 15,
                   ),
                   Container(
@@ -258,10 +258,10 @@ class RegistrationPageState extends State<RegistrationPage> {
                       },
                       controller: confirmPassController,
                       obscureText: isShowConfirmPass,
-                      cursorColor: Color(0xff67802F),
+                      cursorColor:const  Color(0xff67802F),
                       decoration: InputDecoration(
                         hintText: 'Confirm Password',
-                        hintStyle: TextStyle(
+                        hintStyle:const  TextStyle(
                           color: Colors.grey,
                         ),
                         filled: true,
@@ -271,19 +271,19 @@ class RegistrationPageState extends State<RegistrationPage> {
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(
+                          borderSide:const  BorderSide(
                             color: Color(0xff67802F),
                             width: 2,
                           ),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(
+                          borderSide:const  BorderSide(
                             color: Color(0xff67802F),
                             width: 2,
                           ),
                         ),
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.lock,
                           size: 20,
                           color: Color(0xff67802F),
@@ -295,21 +295,21 @@ class RegistrationPageState extends State<RegistrationPage> {
                               });
                             },
                             child: isShowConfirmPass
-                                ? Icon(
+                                ?const  Icon(
                                     Icons.visibility_off,
                                     size: 20,
                                     color: Color(0xff67802F),
                                   )
-                                : Icon(
+                                :const Icon(
                                     Icons.visibility,
                                     size: 20,
                                     color: Color(0xff67802F),
                                   )),
-                        contentPadding: EdgeInsets.only(top: 5),
+                        contentPadding:const  EdgeInsets.only(top: 5),
                       ),
                     ),
                   ),
-                  SizedBox(
+                const   SizedBox(
                     height: 25,
                   ),
                   Align(

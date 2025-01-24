@@ -1,4 +1,3 @@
-import 'package:e_commerce/pay_page.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce/registrationPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -9,6 +8,9 @@ import 'package:e_commerce/OTP_screen.dart';
 class LoginPage extends StatefulWidget {
   static const String id = 'wellcome_screen';
   static String verify = '';
+
+  const LoginPage({super.key});
+  @override
   LoginPageState createState() => LoginPageState();
 }
 
@@ -59,8 +61,8 @@ class LoginPageState extends State<LoginPage> {
         body: SafeArea(
           child: SingleChildScrollView(
             child: Padding(
-              padding:
-                  EdgeInsets.only(left: 20, right: 20, top: 50, bottom: 20),
+              padding: const EdgeInsets.only(
+                  left: 20, right: 20, top: 50, bottom: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -69,7 +71,7 @@ class LoginPageState extends State<LoginPage> {
                     height: 80,
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: Color(0xff67802F),
+                        color: const Color(0xff67802F),
                         width: 2,
                       ),
                       shape: BoxShape.circle,
@@ -163,12 +165,12 @@ class LoginPageState extends State<LoginPage> {
                       onChanged: (newEmail) {
                         email = newEmail;
                       },
-                      cursorColor: Color(0xff67802F),
+                      cursorColor: const Color(0xff67802F),
                       keyboardType: TextInputType.emailAddress,
                       controller: emailController,
                       decoration: InputDecoration(
                         hintText: 'Enter your Email',
-                        hintStyle: TextStyle(color: Colors.grey),
+                        hintStyle: const TextStyle(color: Colors.grey),
                         fillColor: Colors.white,
                         filled: true,
                         border: OutlineInputBorder(
@@ -209,7 +211,7 @@ class LoginPageState extends State<LoginPage> {
                     obscureText: isShowPassword,
                     decoration: InputDecoration(
                       hintText: 'Enter your password',
-                      hintStyle: TextStyle(color: Colors.grey),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       fillColor: Colors.white,
                       filled: true,
                       border: OutlineInputBorder(

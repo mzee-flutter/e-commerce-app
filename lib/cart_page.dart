@@ -7,6 +7,9 @@ const kAmountTextStyle = TextStyle(
 
 class CartPage extends StatefulWidget {
   static const String id = 'cart_page';
+
+  const CartPage({super.key});
+  @override
   CartPageState createState() => CartPageState();
 }
 
@@ -18,9 +21,9 @@ class CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffEFEFEF),
+      backgroundColor: const Color(0xffEFEFEF),
       appBar: AppBar(
-        backgroundColor: Color(0xffEFEFEF),
+        backgroundColor: const Color(0xffEFEFEF),
         automaticallyImplyLeading: false,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,23 +32,23 @@ class CartPageState extends State<CartPage> {
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back,
               ),
             ),
-            Text(
+            const Text(
               'Cart',
               style: TextStyle(
                 fontSize: 19,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            Icon(Icons.shopping_cart_outlined)
+            const Icon(Icons.shopping_cart_outlined)
           ],
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
         ),
         child: Column(
@@ -53,16 +56,16 @@ class CartPageState extends State<CartPage> {
           children: [
             Row(
               children: [
-                Text(
+                const Text(
                   'Order list: ',
                 ),
                 Text(
                   '$itemCount items',
-                  style: TextStyle(fontWeight: FontWeight.w600),
+                  style: const TextStyle(fontWeight: FontWeight.w600),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
@@ -80,17 +83,17 @@ class CartPageState extends State<CartPage> {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 5),
+                          margin: const EdgeInsets.symmetric(horizontal: 5),
                           height: 85,
                           width: 85,
                           decoration: BoxDecoration(
-                              color: Color(0xffEFEFEF),
+                              color: const Color(0xffEFEFEF),
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: AssetImage('images/item5.png'),
                               )),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         Column(
@@ -98,13 +101,13 @@ class CartPageState extends State<CartPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(top: 5),
+                              padding: const EdgeInsets.only(top: 5),
                               child: Row(
                                 children: [
                                   Container(
                                     height: 22,
                                     width: 140,
-                                    child: Text(
+                                    child: const Text(
                                       'Bird of Paradise',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -113,7 +116,7 @@ class CartPageState extends State<CartPage> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 10,
                                   ),
                                   Row(
@@ -135,18 +138,18 @@ class CartPageState extends State<CartPage> {
                                               borderRadius:
                                                   BorderRadius.circular(4),
                                               borderSide: BorderSide.none),
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.remove,
                                             color: Colors.white,
                                             size: 16,
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
                                       Text('$NumberOfPlants'),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
                                       Container(
@@ -154,7 +157,8 @@ class CartPageState extends State<CartPage> {
                                         width: 20,
                                         child: FloatingActionButton.small(
                                           elevation: 2,
-                                          backgroundColor: Color(0xff67802F),
+                                          backgroundColor:
+                                              const Color(0xff67802F),
                                           onPressed: () {
                                             setState(() {
                                               NumberOfPlants++;
@@ -164,7 +168,7 @@ class CartPageState extends State<CartPage> {
                                               borderRadius:
                                                   BorderRadius.circular(4),
                                               borderSide: BorderSide.none),
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.add,
                                             color: Colors.white,
                                             size: 16,
@@ -176,7 +180,7 @@ class CartPageState extends State<CartPage> {
                                 ],
                               ),
                             ),
-                            Row(
+                            const Row(
                               children: [
                                 Text(
                                   '\$59.99',
@@ -203,12 +207,12 @@ class CartPageState extends State<CartPage> {
                                   height: 22,
                                   width: 80,
                                   decoration: BoxDecoration(
-                                    color: Color(0xffEFEFEF),
+                                    color: const Color(0xffEFEFEF),
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 5),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 5),
                                     child: Row(
                                       children: [
                                         Icon(
@@ -216,7 +220,7 @@ class CartPageState extends State<CartPage> {
                                           size: 13,
                                           color: Colors.grey.shade700,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 2,
                                         ),
                                         Text(
@@ -230,17 +234,17 @@ class CartPageState extends State<CartPage> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 40,
                                 ),
                                 MaterialButton(
                                   height: 25,
                                   onPressed: () {},
-                                  color: Color(0xff67802F),
+                                  color: const Color(0xff67802F),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40),
                                   ),
-                                  child: Text(
+                                  child: const Text(
                                     'Check Out',
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 12),
@@ -253,7 +257,7 @@ class CartPageState extends State<CartPage> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
@@ -265,17 +269,17 @@ class CartPageState extends State<CartPage> {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 5),
+                          margin: const EdgeInsets.symmetric(horizontal: 5),
                           height: 85,
                           width: 85,
                           decoration: BoxDecoration(
-                              color: Color(0xffEFEFEF),
+                              color: const Color(0xffEFEFEF),
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: AssetImage('images/item1.png'),
                               )),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         Column(
@@ -283,13 +287,13 @@ class CartPageState extends State<CartPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(top: 5),
+                              padding: const EdgeInsets.only(top: 5),
                               child: Row(
                                 children: [
                                   Container(
                                     height: 22,
                                     width: 140,
-                                    child: Text(
+                                    child: const Text(
                                       'Monstera ',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -298,7 +302,7 @@ class CartPageState extends State<CartPage> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 10,
                                   ),
                                   Row(
@@ -320,18 +324,18 @@ class CartPageState extends State<CartPage> {
                                               borderRadius:
                                                   BorderRadius.circular(4),
                                               borderSide: BorderSide.none),
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.remove,
                                             color: Colors.white,
                                             size: 16,
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
                                       Text('$NumberOfPlants1'),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
                                       Container(
@@ -339,7 +343,8 @@ class CartPageState extends State<CartPage> {
                                         width: 20,
                                         child: FloatingActionButton.small(
                                           elevation: 2,
-                                          backgroundColor: Color(0xff67802F),
+                                          backgroundColor:
+                                              const Color(0xff67802F),
                                           onPressed: () {
                                             setState(() {
                                               NumberOfPlants1++;
@@ -349,7 +354,7 @@ class CartPageState extends State<CartPage> {
                                               borderRadius:
                                                   BorderRadius.circular(4),
                                               borderSide: BorderSide.none),
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.add,
                                             color: Colors.white,
                                             size: 16,
@@ -361,7 +366,7 @@ class CartPageState extends State<CartPage> {
                                 ],
                               ),
                             ),
-                            Row(
+                            const Row(
                               children: [
                                 Text(
                                   '\$35.00',
@@ -388,12 +393,12 @@ class CartPageState extends State<CartPage> {
                                   height: 22,
                                   width: 80,
                                   decoration: BoxDecoration(
-                                    color: Color(0xffEFEFEF),
+                                    color: const Color(0xffEFEFEF),
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 5),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 5),
                                     child: Row(
                                       children: [
                                         Icon(
@@ -401,7 +406,7 @@ class CartPageState extends State<CartPage> {
                                           size: 13,
                                           color: Colors.grey.shade700,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 2,
                                         ),
                                         Text(
@@ -415,17 +420,17 @@ class CartPageState extends State<CartPage> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 40,
                                 ),
                                 MaterialButton(
                                   height: 25,
                                   onPressed: () {},
-                                  color: Color(0xff67802F),
+                                  color: const Color(0xff67802F),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40),
                                   ),
-                                  child: Text(
+                                  child: const Text(
                                     'Check Out',
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 12),
@@ -438,7 +443,7 @@ class CartPageState extends State<CartPage> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
@@ -450,17 +455,17 @@ class CartPageState extends State<CartPage> {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 5),
+                          margin: const EdgeInsets.symmetric(horizontal: 5),
                           height: 85,
                           width: 85,
                           decoration: BoxDecoration(
-                              color: Color(0xffEFEFEF),
+                              color: const Color(0xffEFEFEF),
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: AssetImage('images/item8.png'),
                               )),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         Column(
@@ -468,13 +473,13 @@ class CartPageState extends State<CartPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(top: 5),
+                              padding: const EdgeInsets.only(top: 5),
                               child: Row(
                                 children: [
                                   Container(
                                     height: 22,
                                     width: 140,
-                                    child: Text(
+                                    child: const Text(
                                       'Ageratum ',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -483,7 +488,7 @@ class CartPageState extends State<CartPage> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 10,
                                   ),
                                   Row(
@@ -505,18 +510,18 @@ class CartPageState extends State<CartPage> {
                                               borderRadius:
                                                   BorderRadius.circular(4),
                                               borderSide: BorderSide.none),
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.remove,
                                             color: Colors.white,
                                             size: 16,
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
                                       Text('$NumberOfPlants2'),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
                                       Container(
@@ -524,7 +529,8 @@ class CartPageState extends State<CartPage> {
                                         width: 20,
                                         child: FloatingActionButton.small(
                                           elevation: 2,
-                                          backgroundColor: Color(0xff67802F),
+                                          backgroundColor:
+                                              const Color(0xff67802F),
                                           onPressed: () {
                                             setState(() {
                                               NumberOfPlants2++;
@@ -534,7 +540,7 @@ class CartPageState extends State<CartPage> {
                                               borderRadius:
                                                   BorderRadius.circular(4),
                                               borderSide: BorderSide.none),
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.add,
                                             color: Colors.white,
                                             size: 16,
@@ -546,7 +552,7 @@ class CartPageState extends State<CartPage> {
                                 ],
                               ),
                             ),
-                            Row(
+                            const Row(
                               children: [
                                 Text(
                                   '\$40.00',
@@ -573,12 +579,12 @@ class CartPageState extends State<CartPage> {
                                   height: 22,
                                   width: 80,
                                   decoration: BoxDecoration(
-                                    color: Color(0xffEFEFEF),
+                                    color: const Color(0xffEFEFEF),
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 5),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 5),
                                     child: Row(
                                       children: [
                                         Icon(
@@ -586,7 +592,7 @@ class CartPageState extends State<CartPage> {
                                           size: 13,
                                           color: Colors.grey.shade700,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 2,
                                         ),
                                         Text(
@@ -600,17 +606,17 @@ class CartPageState extends State<CartPage> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 40,
                                 ),
                                 MaterialButton(
                                   height: 25,
                                   onPressed: () {},
-                                  color: Color(0xff67802F),
+                                  color: const Color(0xff67802F),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40),
                                   ),
-                                  child: Text(
+                                  child: const Text(
                                     'Check Out',
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 12),
@@ -626,7 +632,7 @@ class CartPageState extends State<CartPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Container(
@@ -638,11 +644,11 @@ class CartPageState extends State<CartPage> {
                     color: Colors.grey.shade300,
                   )),
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Promo Code',
                       style: TextStyle(
                         color: Colors.grey,
@@ -652,11 +658,11 @@ class CartPageState extends State<CartPage> {
                     ),
                     MaterialButton(
                       onPressed: () {},
-                      color: Color(0xff67802F),
+                      color: const Color(0xff67802F),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      child: Text(
+                      child: const Text(
                         'Apply',
                         style: TextStyle(
                           color: Colors.white,
@@ -668,7 +674,7 @@ class CartPageState extends State<CartPage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Container(
@@ -678,12 +684,12 @@ class CartPageState extends State<CartPage> {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 20,
                 ),
                 child: Column(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -701,7 +707,7 @@ class CartPageState extends State<CartPage> {
                     Divider(
                       color: Colors.grey[300],
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -719,7 +725,7 @@ class CartPageState extends State<CartPage> {
                     Divider(
                       color: Colors.grey[300],
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -737,7 +743,7 @@ class CartPageState extends State<CartPage> {
                     Divider(
                       color: Colors.grey[300],
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -757,15 +763,15 @@ class CartPageState extends State<CartPage> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             MaterialButton(
               height: 45,
               onPressed: () {},
-              color: Color(0xff67802F),
+              color: const Color(0xff67802F),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Text(
+              child: const Text(
                 'Check Out',
                 style: TextStyle(
                   color: Colors.white,

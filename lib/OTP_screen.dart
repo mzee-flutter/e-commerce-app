@@ -128,11 +128,11 @@ class OTPScreenState extends State<OTPScreen> {
                         isSpinner = false;
                       });
                     },
-                    color: Color(0xff67802F),
+                    color: const Color(0xff67802F),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Verify and Login',
                       style: TextStyle(
                         color: Colors.white,
@@ -141,10 +141,10 @@ class OTPScreenState extends State<OTPScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text('Don\'t receive OTP?'),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class container extends StatelessWidget {
   static const String id = 'container';
+
+  const container({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

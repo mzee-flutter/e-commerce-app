@@ -14,14 +14,14 @@ class PlantDetailPageState extends State<PlantDetailPage> {
         backgroundColor: Color(0xffEFEFEF),
         title: Row(
           children: [
-            Icon(
+            const Icon(
               Icons.arrow_back,
               weight: 10,
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width / 4,
             ),
-            Text(
+            const Text(
               'Plant details',
               style: TextStyle(
                 fontSize: 19,
@@ -33,20 +33,20 @@ class PlantDetailPageState extends State<PlantDetailPage> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 height: 280,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('images/item3.png'),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -64,7 +64,7 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(5),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: AssetImage('images/item10.png'),
                             ),
                           ),
@@ -78,15 +78,15 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(5),
                             border: Border.all(
-                              color: Color(0xff67802F),
+                              color: const Color(0xff67802F),
                               width: 2,
                             ),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: AssetImage('images/item3.png'),
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Container(
@@ -94,7 +94,7 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(5),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               alignment: Alignment.topLeft,
                               image: AssetImage('images/item6.png'),
                             ),
