@@ -29,15 +29,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: PlantDetailPage.id,
       routes: {
-        LoginPage.id: (context) => LoginPage(),
+        LoginPage.id: (context) => const LoginPage(),
         ProductPage.id: (context) => const ProductPage(),
-        CartPage.id: (context) => CartPage(),
+        CartPage.id: (context) => const CartPage(),
         PlantDetailPage.id: (context) => PlantDetailPage(),
         PayPage.id: (context) => const PayPage(),
         RegistrationPage.id: (context) => RegistrationPage(),
         SidePannel.id: (context) => const SidePannel(),
         OTPScreen.id: (context) => OTPScreen(),
-        container.id: (context) => container(),
+        container.id: (context) => const container(),
       },
     );
   }

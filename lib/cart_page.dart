@@ -15,9 +15,9 @@ class CartPage extends StatefulWidget {
 
 class CartPageState extends State<CartPage> {
   int itemCount = 3;
-  int NumberOfPlants = 1;
-  int NumberOfPlants1 = 1;
-  int NumberOfPlants2 = 1;
+  int numberOfPlants = 1;
+  int numberOfPlants1 = 1;
+  int numberOfPlants2 = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,8 +129,8 @@ class CartPageState extends State<CartPage> {
                                           backgroundColor: Colors.grey.shade300,
                                           onPressed: () {
                                             setState(() {
-                                              if (NumberOfPlants > 1) {
-                                                NumberOfPlants--;
+                                              if (numberOfPlants > 1) {
+                                                numberOfPlants--;
                                               }
                                             });
                                           },
@@ -148,7 +148,7 @@ class CartPageState extends State<CartPage> {
                                       const SizedBox(
                                         width: 5,
                                       ),
-                                      Text('$NumberOfPlants'),
+                                      Text('$numberOfPlants'),
                                       const SizedBox(
                                         width: 5,
                                       ),
@@ -161,7 +161,7 @@ class CartPageState extends State<CartPage> {
                                               const Color(0xff67802F),
                                           onPressed: () {
                                             setState(() {
-                                              NumberOfPlants++;
+                                              numberOfPlants++;
                                             });
                                           },
                                           shape: OutlineInputBorder(
@@ -315,8 +315,8 @@ class CartPageState extends State<CartPage> {
                                           backgroundColor: Colors.grey.shade300,
                                           onPressed: () {
                                             setState(() {
-                                              if (NumberOfPlants1 > 1) {
-                                                NumberOfPlants1--;
+                                              if (numberOfPlants1 > 1) {
+                                                numberOfPlants1--;
                                               }
                                             });
                                           },
@@ -334,7 +334,7 @@ class CartPageState extends State<CartPage> {
                                       const SizedBox(
                                         width: 5,
                                       ),
-                                      Text('$NumberOfPlants1'),
+                                      Text('$numberOfPlants1'),
                                       const SizedBox(
                                         width: 5,
                                       ),
@@ -347,7 +347,7 @@ class CartPageState extends State<CartPage> {
                                               const Color(0xff67802F),
                                           onPressed: () {
                                             setState(() {
-                                              NumberOfPlants1++;
+                                              numberOfPlants1++;
                                             });
                                           },
                                           shape: OutlineInputBorder(
@@ -501,8 +501,8 @@ class CartPageState extends State<CartPage> {
                                           backgroundColor: Colors.grey.shade300,
                                           onPressed: () {
                                             setState(() {
-                                              if (NumberOfPlants2 > 1) {
-                                                NumberOfPlants2--;
+                                              if (numberOfPlants2 > 1) {
+                                                numberOfPlants2--;
                                               }
                                             });
                                           },
@@ -520,7 +520,7 @@ class CartPageState extends State<CartPage> {
                                       const SizedBox(
                                         width: 5,
                                       ),
-                                      Text('$NumberOfPlants2'),
+                                      Text('$numberOfPlants2'),
                                       const SizedBox(
                                         width: 5,
                                       ),
@@ -533,7 +533,7 @@ class CartPageState extends State<CartPage> {
                                               const Color(0xff67802F),
                                           onPressed: () {
                                             setState(() {
-                                              NumberOfPlants2++;
+                                              numberOfPlants2++;
                                             });
                                           },
                                           shape: OutlineInputBorder(

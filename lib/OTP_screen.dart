@@ -1,5 +1,6 @@
 import 'package:e_commerce/product_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:e_commerce/login_page.dart';
@@ -7,6 +8,9 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class OTPScreen extends StatefulWidget {
   static const String id = 'OTP_screen';
+
+  const OTPScreen({super.key});
+  @override
   State<OTPScreen> createState() => OTPScreenState();
 }
 
@@ -18,36 +22,36 @@ class OTPScreenState extends State<OTPScreen> {
   Widget build(BuildContext context) {
     return ModalProgressHUD(
       inAsyncCall: isSpinner,
-      progressIndicator: CircularProgressIndicator(
+      progressIndicator: const CircularProgressIndicator(
         valueColor: AlwaysStoppedAnimation<Color>(
           Color(0xff67802F),
         ),
       ),
       child: Scaffold(
-        backgroundColor: Color(0xffEFEFEF),
+        backgroundColor: const Color(0xffEFEFEF),
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: Color(0xffEFEFEF),
+          backgroundColor: const Color(0xffEFEFEF),
           title: InkWell(
             onTap: () {
               Navigator.pushNamed(context, LoginPage.id);
             },
-            child: Icon(
+            child: const Icon(
               Icons.arrow_back,
             ),
           ),
           actions: [
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 right: 20,
               ),
               height: 20,
               width: 20,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.black,
                 shape: BoxShape.circle,
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.question_mark,
                 color: Colors.white,
                 size: 15,
@@ -56,29 +60,29 @@ class OTPScreenState extends State<OTPScreen> {
           ],
         ),
         body: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 20,
             vertical: 60,
           ),
           child: Center(
             child: Column(
               children: [
-                Text(
+                const Text(
                   'Verify your',
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text(
+                const Text(
                   'Phone number',
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text('Enter your OTP Code here'),
-                SizedBox(
+                const Text('Enter your OTP Code here'),
+                const SizedBox(
                   height: 30,
                 ),
                 Pinput(
@@ -86,7 +90,7 @@ class OTPScreenState extends State<OTPScreen> {
                   onChanged: (value) {
                     OTPcode = value;
                   },
-                  defaultPinTheme: PinTheme(
+                  defaultPinTheme: const PinTheme(
                     height: 45,
                     width: 45,
                     textStyle: TextStyle(
@@ -100,12 +104,11 @@ class OTPScreenState extends State<OTPScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(),
                   child: MaterialButton(
                     height: 45,
                     onPressed: () async {
@@ -121,8 +124,10 @@ class OTPScreenState extends State<OTPScreen> {
                         await auth.signInWithCredential(credential);
                         Navigator.pushNamed(context, ProductPage.id);
                       } catch (e) {
-                        print('wrong otp entered');
-                        throw e;
+                        if (kDebugMode) {
+                          print('wrong otp entered');
+                        }
+                        rethrow;
                       }
                       setState(() {
                         isSpinner = false;

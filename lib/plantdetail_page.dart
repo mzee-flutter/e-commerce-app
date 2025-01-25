@@ -9,9 +9,9 @@ class PlantDetailPageState extends State<PlantDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffEFEFEF),
+      backgroundColor: const Color(0xffEFEFEF),
       appBar: AppBar(
-        backgroundColor: Color(0xffEFEFEF),
+        backgroundColor: const Color(0xffEFEFEF),
         title: Row(
           children: [
             const Icon(
@@ -69,7 +69,7 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Container(
@@ -126,7 +126,7 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                             ),
                           ),
                         ),
-                        Text(
+                        const Text(
                           '2',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
@@ -138,11 +138,11 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                           child: FloatingActionButton(
                             heroTag: null,
                             onPressed: () {},
-                            backgroundColor: Color(0xff67802F),
+                            backgroundColor: const Color(0xff67802F),
                             shape: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5),
                                 borderSide: BorderSide.none),
-                            child: Icon(
+                            child: const Icon(
                               Icons.add,
                               size: 18,
                               color: Colors.white,
@@ -154,7 +154,7 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Text(
@@ -313,7 +313,7 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Row(
+                    child: const Row(
                       children: [
                         Icon(
                           Icons.shopping_cart,

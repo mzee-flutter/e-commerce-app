@@ -232,14 +232,14 @@ class RegistrationPageState extends State<RegistrationPage> {
                           });
                         },
                         child: isShowPassword
-                            ? const  Icon(
+                            ? const Icon(
                                 Icons.visibility_off,
                                 color: Color(
                                   0xff67802F,
                                 ),
                                 size: 20,
                               )
-                            :const  Icon(
+                            : const Icon(
                                 Icons.visibility,
                                 color: Color(0xff67802F),
                                 size: 20,
@@ -247,7 +247,7 @@ class RegistrationPageState extends State<RegistrationPage> {
                       ),
                     ),
                   ),
-                 const  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Container(
@@ -258,10 +258,10 @@ class RegistrationPageState extends State<RegistrationPage> {
                       },
                       controller: confirmPassController,
                       obscureText: isShowConfirmPass,
-                      cursorColor:const  Color(0xff67802F),
+                      cursorColor: const Color(0xff67802F),
                       decoration: InputDecoration(
                         hintText: 'Confirm Password',
-                        hintStyle:const  TextStyle(
+                        hintStyle: const TextStyle(
                           color: Colors.grey,
                         ),
                         filled: true,
@@ -271,14 +271,14 @@ class RegistrationPageState extends State<RegistrationPage> {
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide:const  BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xff67802F),
                             width: 2,
                           ),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide:const  BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xff67802F),
                             width: 2,
                           ),
@@ -295,21 +295,21 @@ class RegistrationPageState extends State<RegistrationPage> {
                               });
                             },
                             child: isShowConfirmPass
-                                ?const  Icon(
+                                ? const Icon(
                                     Icons.visibility_off,
                                     size: 20,
                                     color: Color(0xff67802F),
                                   )
-                                :const Icon(
+                                : const Icon(
                                     Icons.visibility,
                                     size: 20,
                                     color: Color(0xff67802F),
                                   )),
-                        contentPadding:const  EdgeInsets.only(top: 5),
+                        contentPadding: const EdgeInsets.only(top: 5),
                       ),
                     ),
                   ),
-                const   SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
                   Align(
@@ -351,7 +351,7 @@ class RegistrationPageState extends State<RegistrationPage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisSize: MainAxisSize.min,
                         //the above line means that take that much space as much required
                         children: [

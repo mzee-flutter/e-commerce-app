@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce/registrationPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -16,7 +17,7 @@ class LoginPage extends StatefulWidget {
 
 class LoginPageState extends State<LoginPage> {
   final _auth = FirebaseAuth.instance;
-  TextEditingController? numberContorller = TextEditingController();
+  TextEditingController? numberController = TextEditingController();
   TextEditingController? emailController = TextEditingController();
   TextEditingController? passwordController = TextEditingController();
   bool isShowPassword = true;
@@ -122,9 +123,9 @@ class LoginPageState extends State<LoginPage> {
                       onChanged: (newNumber) {
                         number = newNumber;
                       },
-                      cursorColor: Color(0xff67802F),
+                      cursorColor: const Color(0xff67802F),
                       keyboardType: TextInputType.phone,
-                      controller: numberContorller,
+                      controller: numberController,
                       decoration: InputDecoration(
                         hintText: 'Enter your Phone number',
                         hintStyle: const TextStyle(color: Colors.grey),
@@ -267,7 +268,7 @@ class LoginPageState extends State<LoginPage> {
                     child: MaterialButton(
                       height: 45,
                       onPressed: () async {
-                        numberContorller?.clear();
+                        numberController?.clear();
                         emailController?.clear();
                         passwordController?.clear();
                         setState(() {
@@ -287,11 +288,17 @@ class LoginPageState extends State<LoginPage> {
                           } on FirebaseAuthException catch (e) {
                             // Handle specific errors
                             if (e.code == 'user-not-found') {
-                              print('No user found for that email.');
+                              if (kDebugMode) {
+                                print('No user found for that email.');
+                              }
                             } else if (e.code == 'wrong-password') {
-                              print('Wrong password provided.');
+                              if (kDebugMode) {
+                                print('Wrong password provided.');
+                              }
                             } else {
-                              print('Login failed: ${e.message}');
+                              if (kDebugMode) {
+                                print('Login failed: ${e.message}');
+                              }
                             }
                           }
 
@@ -311,7 +318,9 @@ class LoginPageState extends State<LoginPage> {
                                 (String verificationID) {},
                           );
                         } catch (e) {
-                          print('An error occurred: $e');
+                          if (kDebugMode) {
+                            print('An error occurred: $e');
+                          }
                         } finally {
                           setState(() {
                             isSpinner = false;
