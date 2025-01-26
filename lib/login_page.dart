@@ -282,9 +282,7 @@ class LoginPageState extends State<LoginPage> {
                               email: email ?? '',
                               password: password ?? '',
                             );
-                            if (newUser != null) {
-                              Navigator.pushNamed(context, ProductPage.id);
-                            }
+                            Navigator.pushNamed(context, ProductPage.id);
                           } on FirebaseAuthException catch (e) {
                             // Handle specific errors
                             if (e.code == 'user-not-found') {
@@ -370,7 +368,7 @@ class LoginPageState extends State<LoginPage> {
                             (context),
                             MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  RegistrationPage(),
+                                  const RegistrationPage(),
                             ),
                           );
                         },

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 class PlantDetailPage extends StatefulWidget {
   static const String id = 'plantdetail_page';
+
+  const PlantDetailPage({super.key});
+  @override
   PlantDetailPageState createState() => PlantDetailPageState();
 }
 
@@ -157,11 +160,11 @@ class PlantDetailPageState extends State<PlantDetailPage> {
               const SizedBox(
                 height: 15,
               ),
-              Text(
+              const Text(
                 'Rosemery Plant',
                 style: TextStyle(fontSize: 19, fontWeight: FontWeight.w500),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Row(
@@ -177,20 +180,20 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                           color: Colors.grey.withOpacity(0.3),
                           blurRadius: 7,
                           spreadRadius: 3,
-                          offset: Offset(0, 5),
+                          offset: const Offset(0, 5),
                         ),
                       ],
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage('images/sun1.png'),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         'Sunlight',
                         style: TextStyle(fontWeight: FontWeight.w600),
                       ),
@@ -200,7 +203,7 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Container(
@@ -214,20 +217,20 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                           color: Colors.grey.withOpacity(0.3),
                           spreadRadius: 3,
                           blurRadius: 10,
-                          offset: Offset(0, 5),
+                          offset: const Offset(0, 5),
                         ),
                       ],
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage('images/humidity1.png'),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         'Humidity',
                         style: TextStyle(fontWeight: FontWeight.w600),
                       ),
@@ -239,14 +242,14 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Description',
                 style: TextStyle(fontSize: 19, fontWeight: FontWeight.w500),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Container(
@@ -273,8 +276,8 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
-                              Color(0xffEFEFEF).withOpacity(0.5),
-                              Color(0xffEFEFEF).withOpacity(0.9),
+                              const Color(0xffEFEFEF).withOpacity(0.5),
+                              const Color(0xffEFEFEF).withOpacity(0.9),
                             ],
                           ),
                         ),
@@ -283,13 +286,13 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -306,10 +309,10 @@ class PlantDetailPageState extends State<PlantDetailPage> {
                     ],
                   ),
                   MaterialButton(
-                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
                     height: 45,
                     onPressed: () {},
-                    color: Color(0xff67802F),
+                    color: const Color(0xff67802F),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
